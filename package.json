@@ -1,0 +1,14 @@
+{
+  "name": "master-portfolio-sudh",
+  "version": "1.0.0",
+  "description": "Sudhanshu's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Sudhanshu Sekhar Barik",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
