@@ -1,5 +1,33 @@
 /* mixin is simply resuable piece of code and can use it for lot of elements 
 using include */
+/* Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+
+
+
+}
+*/
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -59,14 +87,14 @@ using include */
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #F4DFC8; }
+      border: solid 3px #f5f832; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #F4DFC8; }
+      color: #f5f832; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -78,7 +106,7 @@ using include */
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #F4DFC8; }
+      color: #f5f832; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -121,31 +149,31 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400;
   /* Instead of regular css h1.lg-heading, we can go inside here, can nest using &, 
-1 rem = 16 pixels */
+   1 rem = 16 pixels */
   /* lighten() function generates a lighter version of the $primary-color variable by 2%,
 rgba(...) function used to define a color with red, green, blue, and alpha (opacity) 
 values and here it defines a color with the lightened $primary-color 
 and an alpha (opacity) value of 0.5.*/ }
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 5rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(5, 5, 5, 0.5); }
+    background: rgba(245, 248, 60, 0.5); }
 
 /* nav link styling removes underline */
 a {
   color: #fff;
   text-decoration: none; }
 
-/* We need header menu to be alwasy fixed and to stay upfront (z-index 2) */
+/* We need header menu to be always fixed and to stay upfront (z-index 2) */
 header {
   position: fixed;
   z-index: 2;
   width: 100%; }
 
 .text-secondary {
-  color: #F4DFC8; }
+  color: #f5f832; }
 
 main {
   padding: 4rem;
@@ -158,7 +186,7 @@ main {
       transition: all 0.5s ease-out;
       /* hover over icons to be secondary color */ }
       main .icons a:hover {
-        color: #F4DFC8; }
+        color: #f5f832; }
   main#home {
     overflow: hidden;
     /* we don'nt want any scroll bar in home (but I have) */ }
@@ -174,7 +202,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #F4DFC8 3px solid; }
+    border: #f5f832 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -187,7 +215,7 @@ main {
   .about-info .job {
     background: #0d0d0d;
     padding: 0.5rem;
-    border-bottom: #F4DFC8 5px solid; }
+    border-bottom: #f5f832 5px solid; }
 
 .projects {
   display: grid;
@@ -198,7 +226,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #F4DFC8;
+      border-color: #f5f832;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -215,7 +243,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #F4DFC8;
+      background: #f5f832;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
@@ -226,7 +254,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #F4DFC8;
+    background: #f5f832;
     color: #000; }
 
 .btn-dark {
@@ -243,54 +271,3 @@ main {
   background: black;
   color: #fff;
   height: 60px; }
-
-@media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
-
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media screen and (max-width: 500px) {
-  main {
-    padding: 2rem; }
-    main #home h1 {
-      margin-top: 5vh; }
-    main .lg-heading {
-      margin-top: 1rem;
-      font-size: 3rem; }
-  .projects {
-    grid-template-columns: 1fr; } }
