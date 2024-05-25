@@ -1,33 +1,5 @@
 /* mixin is simply resuable piece of code and can use it for lot of elements 
 using include */
-/* Media Query Mixins
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
-
-@mixin mediaMd {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
-    @content;
-  }
-}
-
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
-    @content;
-  }
-
-
-
-}
-*/
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -155,7 +127,7 @@ rgba(...) function used to define a color with red, green, blue, and alpha (opac
 values and here it defines a color with the lightened $primary-color 
 and an alpha (opacity) value of 0.5.*/ }
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 5rem; }
+    font-size: 2rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
