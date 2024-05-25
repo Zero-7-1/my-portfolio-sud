@@ -13,8 +13,10 @@
 }
 
 // Tablets & Small Laptops
-// @include mediaMd {
- main {
+@include mediaMd {
+ /*
+ some problem with mobile view 
+  main {
     align-items: center;
     text-align: center;
 
@@ -23,7 +25,7 @@
       margin-bottom: 1rem;
     }
   }
-
+*/
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -86,3 +88,4 @@
     grid-template-columns: 1fr;
   } 
  }
+}

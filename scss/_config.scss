@@ -7,8 +7,7 @@ $home-image: url(../img/background.gif);
 $background-opacity: 0.6;
 
 
-/* mixin is simply resuable piece of code and can use it for lot of elements 
-using include */
+
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
