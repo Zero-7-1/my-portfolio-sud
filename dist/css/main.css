@@ -59,14 +59,14 @@ using include */
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #f5f832; }
+      border: solid 3px #eeb407; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #f5f832; }
+      color: #eeb407; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -78,7 +78,7 @@ using include */
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #f5f832; }
+      color: #eeb407; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -119,7 +119,6 @@ body {
 
 h1, h2, h3 {
   margin: 0;
-  font-weight: 400;
   /* Instead of regular css h1.lg-heading, we can go inside here, can nest using &, 
    1 rem = 16 pixels */
   /* lighten() function generates a lighter version of the $primary-color variable by 2%,
@@ -131,7 +130,7 @@ and an alpha (opacity) value of 0.5.*/ }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(245, 248, 60, 0.5); }
+    background: rgba(248, 187, 7, 0.5); }
 
 /* nav link styling removes underline */
 a {
@@ -145,7 +144,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #f5f832; }
+  color: #eeb407; }
 
 main {
   padding: 4rem;
@@ -158,7 +157,7 @@ main {
       transition: all 0.5s ease-out;
       /* hover over icons to be secondary color */ }
       main .icons a:hover {
-        color: #f5f832; }
+        color: #eeb407; }
   main#home {
     overflow: hidden;
     /* we don'nt want any scroll bar in home (but I have) */ }
@@ -174,7 +173,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #f5f832 3px solid; }
+    border: #eeb407 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -187,7 +186,7 @@ main {
   .about-info .job {
     background: #0d0d0d;
     padding: 0.5rem;
-    border-bottom: #f5f832 5px solid; }
+    border-bottom: #eeb407 5px solid; }
 
 .projects {
   display: grid;
@@ -198,7 +197,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #f5f832;
+      border-color: #eeb407;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -215,7 +214,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #f5f832;
+      background: #eeb407;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
@@ -226,7 +225,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #f5f832;
+    background: #eeb407;
     color: #000; }
 
 .btn-dark {
