@@ -1,7 +1,6 @@
 @import '_config';
 @import '_menu';
-  
- 
+
 * {
   box-sizing: border-box;
 }
@@ -21,16 +20,10 @@ h1, h2, h3 {
   margin: 0;
   // font-weight: 400;
 
-   &.lg-heading { 
+  &.lg-heading { 
     font-size: 2rem;
-     
   }
 
-
-/* lighten() function generates a lighter version of the $primary-color variable by 2%,
-rgba(...) function used to define a color with red, green, blue, and alpha (opacity) 
-values and here it defines a color with the lightened $primary-color 
-and an alpha (opacity) value of 0.5.*/
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -44,9 +37,6 @@ a {
   text-decoration: none;
 }
 
-
-
-
 /* We need header menu to be always fixed and to stay upfront (z-index 2) */
 header {
   position: fixed;  
@@ -54,31 +44,22 @@ header {
   width: 100%;
 }
 
-
 .text-secondary {
   color: $secondary-color;
 }
 
-
-
-
-
-
-
 // main 
-
 main {
   // padding: 1rem;
   height: 100%;
-  min-height: calc(100vh - 60px);
- 
+
   .icons {
     margin-top: 1rem;
 
     a {
       padding: 0.4rem;
       @include easeOut;
-     
+
       /* hover over icons to be secondary color */
       &:hover {
         color: $secondary-color;
@@ -87,22 +68,13 @@ main {
   }
 
   &#home {
-    
-    overflow: hidden;  /* we don'nt want any scroll bar in home (but I have) */
+    overflow: hidden;  /* we don't want any scroll bar in home */
     h1 {  
       margin-top: 10vh;
       
     }
   }
 }
-
-
-
-
-
-
-
-
 
 .about-info {
   display: grid;
@@ -180,6 +152,7 @@ main {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
+
       span {
         color: set-text-color($secondary-color);
       }
@@ -193,6 +166,7 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
@@ -220,4 +194,76 @@ main {
 }
 
 @import 'mobile';
+
+
+
+
+
+
+// Skill Bars
+.skills {
+  width: 500px;
+  margin: 60px auto;
+  // color: $secondary-color;
+
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  li {
+    list-style-type: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0;
+
+    h3 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .bar-container {
+      background-color: darken($primary-color, 10);
+      height: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 0 10px lighten($primary-color, 20);
+
+      .bar {
+        height: 100%;
+        background-color: $secondary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #333;
+        border-radius: 10px 0 0 10px;
+      }
+
+      &.html .bar { width: 70%; animation: html 2s; }
+      &.css .bar { width: 50%; animation: css 2s; }
+      &.javascript .bar { width: 70%; animation: javascript 2s; }
+      &.jquery .bar { width: 30%; animation: jquery 2s; }
+    }
+  }
+}
+
+@keyframes html {
+  0% { width: 0%; }
+  100% { width: 80%; }
+}
+
+@keyframes css {
+  0% { width: 0%; }
+  100% { width: 93%; }
+}
+
+@keyframes javascript {
+  0% { width: 0%; }
+  100% { width: 50%; }
+}
+
+@keyframes jquery {
+  0% { width: 0%; }
+  100% { width: 30%; }
+}
+
 
