@@ -226,13 +226,6 @@ main {
   background: gray;
   color: #333; }
 
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: black;
-  color: #fff;
-  height: 60px; }
-
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
@@ -287,67 +280,3 @@ main {
     font-size: 3rem; }
   .projects {
     grid-template-columns: 1fr; } }
-
-.skills {
-  width: 500px;
-  margin: 60px auto; }
-  .skills h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-  .skills li {
-    list-style-type: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px 0; }
-    .skills li h3 {
-      margin: 0 0 0.5rem 0; }
-    .skills li .bar-container {
-      background-color: black;
-      height: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 0 10px #333333; }
-      .skills li .bar-container .bar {
-        height: 100%;
-        background-color: #eeb407;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: #333;
-        border-radius: 10px 0 0 10px; }
-      .skills li .bar-container.html .bar {
-        width: 70%;
-        animation: html 2s; }
-      .skills li .bar-container.css .bar {
-        width: 50%;
-        animation: css 2s; }
-      .skills li .bar-container.javascript .bar {
-        width: 70%;
-        animation: javascript 2s; }
-      .skills li .bar-container.jquery .bar {
-        width: 30%;
-        animation: jquery 2s; }
-
-@keyframes html {
-  0% {
-    width: 0%; }
-  100% {
-    width: 80%; } }
-
-@keyframes css {
-  0% {
-    width: 0%; }
-  100% {
-    width: 93%; } }
-
-@keyframes javascript {
-  0% {
-    width: 0%; }
-  100% {
-    width: 50%; } }
-
-@keyframes jquery {
-  0% {
-    width: 0%; }
-  100% {
-    width: 30%; } }
